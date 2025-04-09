@@ -9,22 +9,22 @@
     <script>
       // loops
       var pr = prompt("Enter The Number");
-      if(pr == null){
+      if (pr == null) {
         console.log("Cencelled");
-        
-      }
-      let ans = Number();
-
-      if (isNaN(ans)) {
-        console.log("Is Invalid");
-      } else if (ans > 0) {
-        var fact = 1;
-        for (let i = 0; i <= ans; i++) {
-          fact = fact * i;
-        }
-        console.log(fact);
       } else {
-        console.log("Should Be +ve and More  then 0");
+        let ans = Number(pr);
+
+        if (isNaN(ans)) {
+          console.log("Is Invalid");
+        } else if (ans > 0) {
+          var fact = 1;
+          for (let i = 1; i <= ans; i++) {
+            fact = fact * i;
+          }
+          console.log(fact);
+        } else {
+          console.log("Should Be +ve and More  then 0");
+        }
       }
     </script>
   </body>
