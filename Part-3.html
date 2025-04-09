@@ -38,7 +38,12 @@
         } else if (ans > 0) {
           var fact = 1;
           for (let i = 1; i <= Math.floor(ans/2); i++) {
-            fact = fact * i;
+            if(ans%i==0 ){
+              console.log(i);
+              
+            }
+            console.log(n);
+            
           }
           console.log(fact);
         } else {
