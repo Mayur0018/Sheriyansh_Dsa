@@ -11,9 +11,13 @@
       let ans = Number(prompt("Enter The Number"));
 
       if (isNaN(ans)) {
-        console.log("Invalid Input");
+       console.log("Is Invalid");
       } else if (ans > 0) {
-        console.log("Is Positive");
+        var sum = 0;
+        for (let i = 0; i <= ans; i++) {
+          sum = sum + i;
+        }
+        console.log(sum);
       } else {
         console.log("Should Be +ve and More  then 0");
       }
