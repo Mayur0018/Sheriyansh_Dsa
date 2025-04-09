@@ -8,16 +8,21 @@
   <body>
     <script>
       // loops
-      let ans = Number(prompt("Enter The Number"));
+      var pr = prompt("Enter The Number");
+      if(pr == null){
+        console.log("Cencelled");
+        
+      }
+      let ans = Number();
 
       if (isNaN(ans)) {
-       console.log("Is Invalid");
+        console.log("Is Invalid");
       } else if (ans > 0) {
-        var sum = 0;
+        var fact = 1;
         for (let i = 0; i <= ans; i++) {
-          sum = sum + i;
+          fact = fact * i;
         }
-        console.log(sum);
+        console.log(fact);
       } else {
         console.log("Should Be +ve and More  then 0");
       }
