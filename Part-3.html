@@ -7,25 +7,25 @@
   </head>
   <body>
     <script>
-    //   // loops
-    //   var pr = prompt("Enter The Number");
-    //   if (pr == null) {
-    //     console.log("Cencelled");
-    //   } else {
-    //     let ans = Number(pr);
+      //   // loops
+      //   var pr = prompt("Enter The Number");
+      //   if (pr == null) {
+      //     console.log("Cencelled");
+      //   } else {
+      //     let ans = Number(pr);
 
-    //     if (isNaN(ans)) {
-    //       console.log("Is Invalid");
-    //     } else if (ans > 0) {
-    //       var fact = 1;
-    //       for (let i = 1; i <= ans; i++) {
-    //         fact = fact * i;
-    //       }
-    //       console.log(fact);
-    //     } else {
-    //       console.log("Should Be +ve and More  then 0");
-    //     }
-    //   }
+      //     if (isNaN(ans)) {
+      //       console.log("Is Invalid");
+      //     } else if (ans > 0) {
+      //       var fact = 1;
+      //       for (let i = 1; i <= ans; i++) {
+      //         fact = fact * i;
+      //       }
+      //       console.log(fact);
+      //     } else {
+      //       console.log("Should Be +ve and More  then 0");
+      //     }
+      //   }
 
       var pr = prompt("Enter The Number");
       if (pr == null) {
@@ -36,16 +36,13 @@
         if (isNaN(ans)) {
           console.log("Is Invalid");
         } else if (ans > 0) {
-          var fact = 1;
-          for (let i = 1; i <= Math.floor(ans/2); i++) {
-            if(ans%i==0 ){
+          for (let i = 1; i <= Math.floor(ans / 2); i++) {
+            if (ans % i === 0) {
               console.log(i);
-              
             }
-            console.log(n);
             
           }
-          console.log(fact);
+          console.log(ans);
         } else {
           console.log("Should Be +ve and More  then 0");
         }
