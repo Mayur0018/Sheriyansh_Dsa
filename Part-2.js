@@ -149,6 +149,37 @@
 
 // Math.floor use for not get value in the point
 
-let a = 13 == "13";
-console.log(a);
- 
+// let a = 13 == "13";
+// console.log(a);
+  
+
+
+// let ans = Number(prompt("Enter the Number"));
+
+// if(isNaN){
+//   if(age > 18){
+//     console.log("Your Eligible To Give The Vote");
+    
+//   }else{
+//     console.log("your not Eligible To Give The Vote ");
+    
+//   }
+// }
+
+
+// Range Qsution 
+
+let amount = Number(prompt("Enter The Number" ));
+let dis = 0;
+if(amount > 0 && amount <=5000){
+  dis = 5
+}else if(amount > 5000 && amount <=7000){
+  dis = 10;
+}
+else if(amount > 7000 && amount <=9000){
+  dis = 10;
+} 
+else if(amount > 9000){
+  dis = 50;
+}
+console.log(amount - Math.floor((dis*amount)/100 + 1000) );
