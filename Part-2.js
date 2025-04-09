@@ -192,3 +192,6 @@
 12 < 10
   ? console.log("Gabu is The Best Rider")
   : console.log("Show Yemoto is The Best Rider");
+
+const number = 0;
+console.log(num > 0 ? "positive" : num < 0 ? "negative" : "zero");
