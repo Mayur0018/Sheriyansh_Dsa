@@ -213,3 +213,9 @@ let ans = Number(prompt("Enter The Number"));
 if (isNaN(ans)) {
   console.log("Invalid Input");
 }
+else if(ans> 0){
+    console.log("Is Positive");
+    
+}else{
+    console.log("Should Be +ve and More  then 0"); 
+}
