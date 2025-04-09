@@ -189,9 +189,27 @@
 
 // ternary operator
 
-12 < 10
-  ? console.log("Gabu is The Best Rider")
-  : console.log("Show Yemoto is The Best Rider");
+// 12 < 10
+//   ? console.log("Gabu is The Best Rider")
+//   : console.log("Show Yemoto is The Best Rider");
+// const number = 0;
 
-const number = 0;
-console.log(num > 0 ? "positive" : num < 0 ? "negative" : "zero");
+// console.log(num > 0 ? "positive" : num < 0 ? "negative" : "zero");
+// switch case
+
+// switch (true){
+//  case 45> 18:
+//  console.log("45 Still better Than 18");
+// break
+// default : console.log(
+//   "not better"
+// );
+
+// }
+// sum of n natural numbers
+
+let ans = Number(prompt("Enter The Number"));
+
+if (isNaN(ans)) {
+  console.log("Invalid Input");
+}
