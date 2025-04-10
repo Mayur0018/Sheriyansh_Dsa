@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // array is the liner datastrucure this store value in continue manner
+      // let arr = []
+      // arr[7] = 700;
+      // console.log(arr);
+      //    for(let i =0; i<5; i++){
+      //    const ans =  prompt("Enter The Value");
+      //     const arr = [];
+      //     arr.push[ans];
+      //    }
+      //    console.log(arr);
+
+      //   let arr = new Array(2);
+      //   for (let i = 0; i < arr.length; i++) {
+      //     arr[i] = Number(prompt("Enter The Number"));
+
+      //   }
+      //   console.log(arr);
+
+      // let arr = [10,20,30,40,50,60];
+      // let maxvalue = [];
+
+      // for(let i = 0; i<arr.length;i++){
+      // sum = sum + arr[i]
+      // }
+      // console.log(sum);
+
+
+    //   Array Max
+    //   let arr = [50, 10, 20, 700, 40];
+    //   let max = [0];
+
+    //   for (let i = 1; i < arr.length; i++) {
+    //     if (max < arr[i]) {
+    //       max = arr[i];
+    //     }
+    //   }
+    //   console.log(max);
+
+
+    // Solve The Second Max Value Of Array 
+
+    let arr = [10,20,30,60,65,70,85];
+
+    let max = Math.max(arr[0],arr[1]);
+    let smax = Math.min(arr[0],arr[1]);
+
+    for(let i = 2; i<=arr.length; i++){
+        if(arr[i]> max){
+            smax = max;
+            max = arr[i]
+        }
+    }
+    console.log(smax);
+    
+
+    </script>
+  </body>
+</html>

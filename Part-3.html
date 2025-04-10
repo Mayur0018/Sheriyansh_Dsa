@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
+    <script src="Part-3.js">
       //   // loops
       //   var pr = prompt("Enter The Number");
       //   if (pr == null) {
@@ -52,24 +52,7 @@
 
       // gusss the random Number
 
-      let random = Math.floor(Math.random() * 100 + 1);
-      let guess = -1;
-
-      while (guess !== random) {
-        guess = Number(prompt("guess The Number"));
-        if (isNaN(guess) || guess < 1 || guess > 100) {
-          console.log("Try Again between 1 - 100");
-          continue
-        }
-        if(guess > random ){
-          console.log("too High,Try Agin ");
-        }else if(guess < random){
-          console.log("To Low,Try again");
-        }else if(guess == random){
-          console.log("Conngrats 🎉");
-          
-        }
-      }
+    
     </script>
   </body>
 </html> 
