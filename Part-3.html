@@ -27,26 +27,49 @@
       //     }
       //   }
 
-      var pr = prompt("Enter The Number");
-      if (pr == null) {
-        console.log("Cencelled");
-      } else {
-        let ans = Number(pr);
+      //  fator
+      //   var pr = prompt("Enter The Number");
+      //   if (pr == null) {
+      //     console.log("Cencelled");
+      //   } else {
+      //     let ans = Number(pr);
 
-        if (isNaN(ans)) {
-          console.log("Is Invalid");
-        } else if (ans > 0) {
-          for (let i = 1; i <= Math.floor(ans / 2); i++) {
-            if (ans % i === 0) {
-              console.log(i);
-            }
-            
-          }
-          console.log(ans);
-        } else {
-          console.log("Should Be +ve and More  then 0");
+      //     if (isNaN(ans)) {
+      //       console.log("Is Invalid");
+      //     } else if (ans > 0) {
+      //       var primehai = true;
+      //       for (var i = 2; i <= Math.floor(ans / 2); i++) {
+      //         if (ans % i === 0) {
+      //           primehai = false;
+      //           break;
+      //         }
+      //       }
+      //       console.log(primehai );
+      //     } else {
+      //       console.log("Should Be +ve and More  then 0");
+      //     }
+      //   }
+
+      // gusss the random Number
+
+      let random = Math.floor(Math.random() * 100 + 1);
+      let guess = -1;
+
+      while (guess !== random) {
+        guess = Number(prompt("guess The Number"));
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          console.log("Try Again between 1 - 100");
+          continue
+        }
+        if(guess > random ){
+          console.log("too High,Try Agin ");
+        }else if(guess < random){
+          console.log("To Low,Try again");
+        }else if(guess == random){
+          console.log("Conngrats 🎉");
+          
         }
       }
     </script>
   </body>
-</html>
+</html> 
