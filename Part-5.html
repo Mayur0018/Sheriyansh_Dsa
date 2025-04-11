@@ -24,30 +24,37 @@
 
       //   console.log(reverse);
 
-
       //   palidrom string meneas when we reverse string back and frontd= and goes resut tru show that called pandromue string
-    //   let s = prompt("Enter A String");
-    //   let isPalindrome = true;
+      //   let s = prompt("Enter A String");
+      //   let isPalindrome = true;
 
-    //   let i = 0;
-    //   j = s.length - 1;
+      //   let i = 0;
+      //   j = s.length - 1;
 
-    //   while (i < j) {
-    //     if (s.charAt(i) !== s.charAt(j)) {
-    //       isPalindrome = false;
-    //       break;
-    //     }
-    //     i++;
-    //     j--;
-    //   }
+      //   while (i < j) {
+      //     if (s.charAt(i) !== s.charAt(j)) {
+      //       isPalindrome = false;
+      //       break;
+      //     }
+      //     i++;
+      //     j--;
+      //   }
 
-    //   if (isPalindrome) console.log("Palindrome");
-    //   else {
-    //     console.log("no Palindrome");
-    //   }
-  
-    
-
+      //   if (isPalindrome) console.log("Palindrome");
+      //   else {
+      //     console.log("no Palindrome");
+      //   }
+      let s = prompt("Enter A String");
+      let Toggle = "";
+      for (let i = 0; i < s.length-1; i++) {
+        if (s.charCodeAt(i) >= 65 && s.charCodeAt(i) <= 90) {
+          Toggle = Toggle + String.fromCharCode(s.charCodeAt(i) + 32);
+        } else if (s.charCodeAt(i) >= 97 && s.charCodeAt(i) <= 122) {
+          Toggle = Toggle + String.fromCharCode(s.charCodeAt(i) - 32);
+        }
+      }
+      console.log(Toggle);
+      
     </script>
   </body>
 </html>
