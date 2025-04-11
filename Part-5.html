@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // string is behave like a array
-        
-    //    imutable means not change his orignal state;
-    
+      // string is behave like a array
+      //    imutable means not change his orignal state;
+      //   let M = "Mayur is The Best Coder";
+      //   let A = "Coding is The Not Game Of Day 1 Its i Year Of HardWork";
+      //   console.log(M.concat(A));
+
+      //   for (let i = 0; i <= M.length; i++) {
+      //     //  console.log(M[i]);
+      //   }
+      //   let reverse = "";
+      //   for (let j = M.length - 1; j >= 0; j--) {
+      //     reverse = reverse + M.charAt(j);
+      //     console.log(M.charAt(j));
+      //   }
+
+      //   console.log(reverse);
+      //   palidrom string meneas when we reverse string back and frontd= and goes resut tru show that called pandromue string
+
+      let s = prompt("Enter A String");
+      let isPalindrome = true;
+
+      let i = 0;
+      j = s.length - 1;
+
+      while (i < j) {
+        if (s.charAt(i) !== s.charAt(j)) {
+          isPalindrome = false;
+          break;
+        }
+        i++;
+        j++;
+      }
     </script>
-</body>
+  </body>
 </html>
