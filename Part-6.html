@@ -78,17 +78,30 @@
       //   newArry[0] = copy1;
       //   console.log(newArry);
 
-      let arr = [1, 2, 3, 4, 5];
-      let k = Number(prompt("Enter Value"));
+      //   let arr = [1, 2, 3, 4, 5];
+      //   let k = Number(prompt("Enter Value"));
+      //   k = k % arr.length;
+      //   for (let j = 0; j < k; j++) {
+      //     let copy = arr[0];
+      //     for (let i = 0; i < arr.length - 1; i++) {
+      //       arr[i] = arr[i + 1];
+      //     }
+      //     arr[arr.length - 1] = copy;
+      //   }
+      //   console.log(arr);
+
+      let arr = [1, 2, 3, 4, 5, 6];
+      let temp = new Array(arr.length);
+
+      let k = Number(prompt("Enter K value"));
       k = k % arr.length;
-      for (let j = 0; j < k; j++) {
-        let copy = arr[0];
-        for (let i = 0; i < arr.length - 1; i++) {
-          arr[i] = arr[i + 1];
-        }
-        arr[arr.length - 1] = copy; 
+
+      for (let i = 0; i < arr.length; i++) {
+        temp[i] = arr[(i + k) % arr.length];
       }
-      console.log(arr);
+      console.log(temp);
+
+      
     </script>
   </body>
 </html>
