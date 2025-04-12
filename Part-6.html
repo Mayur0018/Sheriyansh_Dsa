@@ -60,13 +60,34 @@
 
       // 2 pointer alogorithem
 
-      let arr = [10, 20, 30, 40, 50, 60];
-      let copy = arr[0];
-      for (let i = 0; i < arr.length - 1; i++) {
-        arr[i] = arr[i + 1];
-      }
-      arr[arr.length - 1] = copy;
+      //   let arr = [10, 20, 30, 40, 50, 60];
+      //   let copy = arr[0];
+      //   for (let i = 0; i < arr.length - 1; i++) {
+      //     arr[i] = arr[i + 1];
+      //   }
+      //   arr[arr.length - 1] = copy;
+      //   console.log(arr);
 
+      //   //   right pointer array element
+
+      //   let newArry = [10, 20, 30, 40, 50, 60];
+      //   let copy1 = newArry[newArry.length - 1];
+      //   for (let i = arr.length - 1; i > 0; i--) {
+      //     newArry[i] = newArry[i - 1];
+      //   }
+      //   newArry[0] = copy1;
+      //   console.log(newArry);
+
+      let arr = [1, 2, 3, 4, 5];
+      let k = Number(prompt("Enter Value"));
+      k = k % arr.length;
+      for (let j = 0; j < k; j++) {
+        let copy = arr[0];
+        for (let i = 0; i < arr.length - 1; i++) {
+          arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = copy; 
+      }
       console.log(arr);
     </script>
   </body>
