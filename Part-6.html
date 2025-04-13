@@ -100,21 +100,45 @@
       //     temp[i] = arr[(i + k) % arr.length];
       //   }
       //   console.log(temp);
-    
-    //   reverse blog swap algo
 
-    let arr = [1,2,3,4,5];
-    let k = Number(prompt("Enter The Value of k"))
-    reverse(0,k-1);
-    function reverse(i,j){
-      while(i<j){
-        let temp = arr[i];
-        arr[i] = arr[j]
-        arr[j] = temp
-        i++
-        j--
+      //   reverse blog swap algo
+
+      // let arr = [1,2,3,4,5];
+      // let k = Number(prompt("Enter The Value of k"))
+      // reverse(0,k-1);
+      // function reverse(i,j){
+      //   while(i<j){
+      //     let temp = arr[i];
+      //     arr[i] = arr[j]
+      //     arr[j] = temp
+      //     i++
+      //     j--
+      //   }
+      // }
+
+      // merge sorted array
+
+      let arr1 = [2, 5, 6];
+      let arr2 = [1, 3, 4];
+      let merge = new Array(arr1.length + arr2.length);
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+          merge[k++] = arr1[i++];
+        } else {
+          merge[k++] = arr2[j++];
+        }
       }
-    }
+
+      while(j<arr2.length){
+        merge[k++] = arr2[j++]
+      }
+      while(i<arr1.length){
+        merge[k++] = arr1[i++]
+      }
+      console.log(merge);
       
     </script>
   </body>
