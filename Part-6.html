@@ -90,19 +90,32 @@
       //   }
       //   console.log(arr);
 
-    //   let arr = [1, 2, 3, 4, 5, 6];
-    //   let temp = new Array(arr.length);
+      //   let arr = [1, 2, 3, 4, 5, 6];
+      //   let temp = new Array(arr.length);
 
-    //   let k = Number(prompt("Enter K value"));
-    //   k = k % arr.length;
+      //   let k = Number(prompt("Enter K value"));
+      //   k = k % arr.length;
 
-    //   for (let i = 0; i < arr.length; i++) {
-    //     temp[i] = arr[(i + k) % arr.length];
-    //   }
-    //   console.log(temp);
-      
-
+      //   for (let i = 0; i < arr.length; i++) {
+      //     temp[i] = arr[(i + k) % arr.length];
+      //   }
+      //   console.log(temp);
     
-    </script> 
+    //   reverse blog swap algo
+
+    let arr = [1,2,3,4,5];
+    let k = Number(prompt("Enter The Value of k"))
+    reverse(0,k-1);
+    function reverse(i,j){
+      while(i<j){
+        let temp = arr[i];
+        arr[i] = arr[j]
+        arr[j] = temp
+        i++
+        j--
+      }
+    }
+      
+    </script>
   </body>
 </html>
