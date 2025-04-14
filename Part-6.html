@@ -153,7 +153,22 @@
       // };
 
       // sort the color
+      
+      // maximum subarray
 
+      var maxSubarry = function(num){
+        let max = -Infinity;
+        let sum = 0;
+        for(let i =0; i<num.length; i++){
+            sum += num[i]
+            max = Math.max(max,sum)
+            if(sum<0) sum=0;
+        }
+        return max;
+      }
+      
+      
+      
       
 
     </script>
