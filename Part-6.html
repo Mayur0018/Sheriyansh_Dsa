@@ -181,28 +181,41 @@
       //    return ans
       // }
 
-      let trap = function (height) {
-        let left = new Array(height.length);
-        let right = new Array(height.length);
-        let maxLeft = height[0],
-          maxRight = height[height.length - 1];
-        (left[0] = maxLeft), (right[right.length - 1] = maxRight);
+      // let trap = function (height) {
+      //   let left = new Array(height.length);
+      //   let right = new Array(height.length);
+      //   let maxLeft = height[0],
+      //     maxRight = height[height.length - 1];
+      //   (left[0] = maxLeft), (right[right.length - 1] = maxRight);
 
-        for (let i = 0; i < height.length - 1; i++) {
-          maxLeft = Math.max(height[i], maxLeft);
-          left[i] = maxLeft;
-        }
-        for (let i = height.length - 2; i > 0; i--) {
-          maxRight = Math.max(height[i], maxRight);
-          right[i] = maxRight;
-        }
-        let ans = 0;
-        for (let i = 0; i < height.length - 1; i++) {
-          ans += Math.max(left[i], right[i] - height[i]);
-        }
-        return ans
-      }; 
-      console.log(trap());
+      //   for (let i = 0; i < height.length - 1; i++) {
+      //     maxLeft = Math.max(height[i], maxLeft);
+      //     left[i] = maxLeft;
+      //   }
+      //   for (let i = height.length - 2; i > 0; i--) {
+      //     maxRight = Math.max(height[i], maxRight);
+      //     right[i] = maxRight;
+      //   }
+      //   let ans = 0;
+      //   for (let i = 0; i < height.length - 1; i++) {
+      //     ans += Math.max(left[i], right[i] - height[i]);
+      //   }
+      //   return ans
+      // };
+      // console.log(trap());
+
+      // let name = "Mayur is The Best Coder";
+      // let reverse = "";
+      // for (let i = name.length - 1; i > 0; i--) {
+      //   reverse = reverse + name[i]
+      // }
+      // console.log(reverse);
+      // let reverse = ""
+      // let arry = [100,90,80,70,60,50,40,30,20,10];
+      // for(let i = arry.length-1; i>0; i--){
+      //    reverse = reverse + arry[i]
+      // }
+      // console.log("reverse String:-",reverse);
       
     </script>
   </body>
