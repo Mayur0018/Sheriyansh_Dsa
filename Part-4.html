@@ -33,65 +33,75 @@
       // }
       // console.log(sum);
 
+      //   Array Max
+      //   let arr = [50, 10, 20, 700, 40];
+      //   let max = [0];
 
-    //   Array Max
-    //   let arr = [50, 10, 20, 700, 40];
-    //   let max = [0];
+      //   for (let i = 1; i < arr.length; i++) {
+      //     if (max < arr[i]) {
+      //       max = arr[i];
+      //     }
+      //   }
+      //   console.log(max);
 
-    //   for (let i = 1; i < arr.length; i++) {
-    //     if (max < arr[i]) {
-    //       max = arr[i];
-    //     }
-    //   }
-    //   console.log(max);
+      // Solve The Second Max Value Of Array
 
+      // let arr = [10,20,30,60,65,70,85];
 
-    // Solve The Second Max Value Of Array 
+      // let max = Math.max(arr[0],arr[1]);
+      // let smax = Math.min(arr[0],arr[1]);
 
-    // let arr = [10,20,30,60,65,70,85];
+      // for(let i = 2; i<=arr.length; i++){
+      //     if(arr[i]> max){
+      //         smax = max;
+      //         max = arr[i]
+      //     }else if(smax> max && max !== arr[i]){
+      //         smax = max
+      //     }
+      // }
+      // console.log(smax);
 
-    // let max = Math.max(arr[0],arr[1]);
-    // let smax = Math.min(arr[0],arr[1]);
+      // reverse array
 
-    // for(let i = 2; i<=arr.length; i++){
-    //     if(arr[i]> max){
-    //         smax = max;
-    //         max = arr[i]
-    //     }else if(smax> max && max !== arr[i]){
-    //         smax = max
-    //     }
-    // }
-    // console.log(smax);
-    
+      // let arr = [10,20,30,40,50,60];
+      // let newarray = new Array(arr);
 
-    // reverse array 
+      // for(let i = arr.length-1; i>=0; i--){
+      //     newarray.push(arr[i]);
+      // }
 
+      // console.log(newarray);
 
-    // let arr = [10,20,30,40,50,60];
-    // let newarray = new Array(arr);
+      // 2 point algorithem
 
-    // for(let i = arr.length-1; i>=0; i--){
-    //     newarray.push(arr[i]);
-    // }
+      // let arr = [1,0,1,0,1,0,1,0]
+      // let i = 0; j = 0;
 
-    // console.log(newarray);
-    
-    // 2 point algorithem 
+      // while(i< arr.length){
+      //     if(arr[i]==0){
+      //         let temp = arr[i];
+      //         arr[i] = arr[j]
+      //         arr[j] = temp;
+      //         j++
+      //     }
+      //     i++
+      // }
+      // console.log(arr);
+      function reverseWords(sentence) {
+        let arr = sentence.split("");
+        let i = 0;
+        let j = arr.length - 1;
+        while (i < j) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+          i++;
+          j--;
+        }
+        return arr.join("");
+      }
 
-    // let arr = [1,0,1,0,1,0,1,0]
-    // let i = 0; j = 0;
-    
-    // while(i< arr.length){
-    //     if(arr[i]==0){
-    //         let temp = arr[i];
-    //         arr[i] = arr[j]
-    //         arr[j] = temp;
-    //         j++ 
-    //     }
-    //     i++
-    // }
-    // console.log(arr);
-    
-       </script>
+      console.log(reverseWords("JavaScript"));
+    </script>
   </body>
 </html>
