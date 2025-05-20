@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    
+    //   let a = 32,
+    //     b = 20;
+    //   while (a != b) {
+    //     if (a > b) a = a - b;
+    //     else b = b - a;
+    //   }
+    //   console.log(a);
+    function  gcd(a,b){
+        if(a==b) return a;
+        if(a>b) return gcd(a-b,b)
+        return gcd(b, b-a);
+    }   
     </script>
-</body>
+  </body>
 </html>
