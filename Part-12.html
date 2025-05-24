@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function conquor(arr ,first,mid,last){
+            let temp = new Array(last-first+1);
+            let i = f , j = mid + 1; k = 0;
+            while(i<mid && j <= last){
+                if(arr[i]< arr[j]){
+                    temp[k++] = arr[i]
+                }else temp[k++] = arr[j++]
+            }
+            while(i< last){
+             temp[k++] = arr[i++];
+            }
+         while(j <= last){
+            tempp[k++] = arr[j++]
+         }
+        }
+    </script>
+</body>
+</html>
