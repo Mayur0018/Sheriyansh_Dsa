@@ -22,6 +22,12 @@
             tempp[k++] = arr[j++]
          }
         }
+        function devide(arr,first,last){
+            let mid = (first+last)/2;
+            divide(arr,first,mid)
+            divide(arr,mid+1,last)
+            conquor(); 
+        }
     </script>
 </body>
 </html>
