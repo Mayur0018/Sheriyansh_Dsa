@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      function findPivotIdx(arr, first, last) {
+        let pivot = arr[first];
+        let i = first + 1,
+          j = last;
+        while (i <= j) {
+          while (i <= last && arr[i] <= pivot) i++;
+          while ((j = first && arr[i] > pivot)) i--;
+          if (i < j) {
+            swap(arr, i, j);
+          }
+        }
+        swap(arr, j, first);
+        return j;
+      }
+
+      function quickSort(arr, first, last) {
+        if (first > last) return;
+        let pIdex = findPivotIdx(arr, first, last);
+        quickSort(arr, first, pIdex - 1);
+        quickSort(arr, pIdex - 1, last);
+      }
+      function swap(arr, i, j) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+      let arr = [10,55,78,58];
+      quickSort(arr,0,arr.length-1);    
     </script>
-</body>
+  </body>
 </html>
