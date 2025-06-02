@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let arr = [4,8,4,5,8];
-        let i =0;
-        while(i<arr.length){
-            let correctIndx = arr[i]-1
-            if(arr[i] != arr[correctIndx]){
-                let temp = arr[i]
-                arr[i] =arr[correctIndx]
-                arr[correctIndx] = temp
-            }else i++;
-        }
-        console.log(arr);
-        
+      let arr = [4, 8, 4, 5, 8];
+      let i = 0;
+      while (i < arr.length) {
+        let correctIndx = arr[i] - 1;
+        if (arr[i] != arr[correctIndx]) {
+          let temp = arr[i];
+          arr[i] = arr[correctIndx];
+          arr[correctIndx] = temp;
+        } else i++;
+      }
+      
     </script>
-</body>
+  </body>
 </html>
