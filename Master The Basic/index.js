@@ -15,8 +15,8 @@
 
 // console.log(a, b);
 
-// \ this use for create divison for any values 
-// % this use for get remainder of any values 
+// \ this use for create divison for any values
+// % this use for get remainder of any values
 
 // ! this check not equal to left to right
 
@@ -24,5 +24,4 @@
 // let b = a++;
 // console.log(a);
 // console.log(b);
-
 
