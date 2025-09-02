@@ -21,15 +21,16 @@
 
 // find second largest of Array
 
-let arr = [10,20,76,80,40,100];
-let maxvalue = Math.max(arr[0],arr[1]);
-let minvalue = Math.min(arr[0],arr[1]);
+let arr = [10, 20, 76, 80, 40, 100];
+let maxvalue = Math.max(arr[0], arr[1]);
+let minvalue = Math.min(arr[0], arr[1]);
 
-for(let i = 2; i<arr.length; i++){
-    if(arr[i]>maxvalue){
-        minvalue = maxvalue;
-        maxvalue = arr[i];
-    }
+for (let i = 2; i < arr.length; i++) {
+  if (arr[i] > maxvalue) {
+    minvalue = maxvalue;
+    maxvalue = arr[i];  
+  } else if (arr[i] > minvalue && maxvalue !== arr[i]) {
+    minvalue = arr[i];
+  }
 }
 console.log(minvalue);
-
