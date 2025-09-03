@@ -72,10 +72,23 @@
 // arr[arr.length - 1] = copy;
 // console.log(arr);
 
-// Right Rotation By 1 Element 
+// Right Rotation By 1 Element
 // let copy2 = arr[arr.length-1];
 // for(let i = arr.length-1; i>0; i--){
 //   arr[i] = arr[i-1];
 // }
 // arr[0] = copy2;
 // console.log(arr);
+
+
+let arr = [10, 20, 30, 40, 50, 60];
+let copy = arr[0];
+let k = Number(prompt("Enter K Number"));
+for (let j = 0; j < k; j++) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr[arr.length - 1] = copy;
+}
+console.log(arr);
+ 
