@@ -80,17 +80,17 @@
 // arr[0] = copy2;
 // console.log(arr);
 
-
-let arr = [10, 20, 30, 40, 50, 60];
-let copy = arr[0];
-let k = Number(prompt("Enter K Number"));
-k = k % arr.length;
-
-for (let j = 0; j < k; j++) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    arr[i] = arr[i + 1];
-  }
-  arr[arr.length - 1] = copy;
-}
-console.log(arr);
- 
+// let arr = [10, 20, 30, 40, 50, 60];
+// let copy = arr[0];
+// let k = Number(prompt("Enter K Number"));
+// k = k % arr.length;
+// let count = 0;
+// for (let j = 0; j < k; j++) {
+//   count++;
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr[arr.length - 1] = copy;
+// }
+// console.log(arr);
+// console.log(count);
