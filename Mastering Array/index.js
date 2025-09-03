@@ -37,14 +37,37 @@
 
 // reverse Array with extra space
 
-let arr = [10, 20, 30, 40, 50, 60];
-let i = 0, j = arr.length - 1;
+// let arr = [10, 20, 30, 40, 50, 60];
+// let i = 0, j = arr.length - 1;
 
-while (i != j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-  i++;
-  j--;
+// while (i < j) {
+//   let temp = arr[i];
+//   arr[i] = arr[j];
+//   arr[j] = temp;
+//   i++;
+//   j--;
+// }
+// console.log(arr);
+
+// let arr = [0, 1, 1, 0, 1, 0];
+// let j = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] == 0) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j++;
+//   }
+// }
+// console.log(arr);
+
+// Advance Array
+// left rotation by 1 Element
+let arr = [10, 20, 30, 40, 50];
+let copy = arr[0];
+for (let i = 0; i < arr.length - 1; i++) {
+  arr[i] = arr[i + 1];
 }
+arr[arr.length - 1] = copy;
 console.log(arr);
