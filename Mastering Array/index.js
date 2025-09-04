@@ -178,3 +178,36 @@
 //   }
 // }
 // console.log(arr);
+
+// var maxSuarray = function (nums) {
+//   let max = -Infinity;
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     sum = sum + nums[i];
+//     max = Math.max(max, sum);
+//     if (sum < 0) {
+//       sum = 0;
+//     }
+//   }
+//   return max;
+// };
+
+// console.log(maxSuarray([-2, 1, -3, -1, 2, 1, -5, 4]));
+
+
+// find majority of Array
+// let arr = [2, 2, 1, 1, 1, 2, 2];
+// let ans = arr[0];
+// let count = 1;
+// for (let i = 1; i < arr.length; i++) {
+//   if (count == 0) {
+//     ans = arr[i];
+//     count = 1;
+//   } else if (ans == arr[i]) {
+//     count++;
+//   } else {
+//     count--;
+//   }
+// }
+// console.log(ans);
+// console.log(count);
