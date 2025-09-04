@@ -119,21 +119,37 @@
 // console.log(removeDuplicates([0, 1, 2, 3]));
 
 // merge two Sorted Array
-let arr1 = [2, 4, 6, 8, 10];
-let arr2 = [1, 3, 7, 11];
-let mergeArray = new Array(arr1.length + arr2.length);
-let i = (j = k = 0);
-for (let i = 0; i < arr1.length; i++) {
-  for (let j = 0; j < arr2.length; j++) {
-    if (arr1[i] < arr2[j]) {
-      mergeArray[k] = arr1[i];
-      i++;
-      k++;
-    }else{
-        mergeArray[k] = arr1[j]
-        j++;
+// let arr1 = [2, 4, 6, 8, 10];
+// let arr2 = [1, 3, 7, 11];
+// let mergeArray = new Array(arr1.length + arr2.length);
+// let i = 0,
+//   j = 0,
+//   k = 0;
+
+// while (i < arr1.length && j < arr2.length) {
+//   if (arr1[i] < arr2[j]) {
+//     mergeArray[k++] = arr1[i++];
+//   } else {
+//     mergeArray[k++] = arr2[j++];
+//   }
+// }
+// while (j < arr2.length) {
+//   mergeArray[k] = arr2[j++];
+// }
+// while (i < arr1.length) {
+//   mergeArray[k] = arr1[i++];
+// }
+// console.log(mergeArray);
+
+var maxprofit = function (prices) {
+  let maxprofit = 0;
+  let minprofit = prices[0];
+  for (let i = 0; i < minprofit.length; i++) {
+    if (arr[i] < min) {
+      minprofit = maxprofit;
+      let profit = arr[i] - min;
+      maxprofit = Math.max(maxprofit, profit);
     }
+    return maxprofit;
   }
-  return j;
-}
-console.log(temp);
+};
