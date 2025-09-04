@@ -141,16 +141,17 @@
 // }
 // console.log(mergeArray);
 
-var maxprofit = function (prices) {
-  let maxprofit = 0;
-  let minprofit = prices[0];
-  for (let i = 0; i < prices.length; i++) {
-    if (prices[i] < minprofit) {
-      minprofit = maxprofit;
-      let profit = prices[i] - minprofit;
-      maxprofit = Math.max(maxprofit, profit);
-    }
-    return maxprofit;
-  }
-};
-console.log(maxprofit([10, 0, 50, 80, 400]));
+// var maxprofit = function (prices) {
+//   let maxprofit = 0;
+//   let minprofit = prices[0];
+//   for (let i = 0; i < prices.length; i++) {
+//     if (prices[i] < minprofit) {
+//       minprofit = prices[i];
+//     }
+//     let profit = prices[i] - minprofit;
+//     maxprofit = Math.max(maxprofit, profit);
+//   }
+//   return maxprofit;
+// };
+
+// console.log(maxprofit([10, 0, 50, 80, 400]));
