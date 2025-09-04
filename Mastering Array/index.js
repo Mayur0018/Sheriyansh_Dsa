@@ -104,5 +104,36 @@
 // }
 // console.log(temp);
 
-// remove dulicates from the sorted array 
+// Remove Dulicates From The Sorted Array
 
+// var removeDuplicates = function (nums) {
+//   let j = 1;
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i] != nums[i + 1]) {
+//       nums[j] = nums[i + 1];
+//       j++;
+//     }
+//   }
+//   return j;
+// };
+// console.log(removeDuplicates([0, 1, 2, 3]));
+
+// merge two Sorted Array
+let arr1 = [2, 4, 6, 8, 10];
+let arr2 = [1, 3, 7, 11];
+let mergeArray = new Array(arr1.length + arr2.length);
+let i = (j = k = 0);
+for (let i = 0; i < arr1.length; i++) {
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1[i] < arr2[j]) {
+      mergeArray[k] = arr1[i];
+      i++;
+      k++;
+    }else{
+        mergeArray[k] = arr1[j]
+        j++;
+    }
+  }
+  return j;
+}
+console.log(temp);
