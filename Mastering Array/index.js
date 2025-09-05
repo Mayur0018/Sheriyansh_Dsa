@@ -211,3 +211,6 @@
 // }
 // console.log(ans);
 // console.log(count);
+
+// traping rain water 
+
