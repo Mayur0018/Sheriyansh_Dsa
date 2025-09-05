@@ -194,7 +194,6 @@
 
 // console.log(maxSuarray([-2, 1, -3, -1, 2, 1, -5, 4]));
 
-
 // find majority of Array
 // let arr = [2, 2, 1, 1, 1, 2, 2];
 // let ans = arr[0];
@@ -212,5 +211,12 @@
 // console.log(ans);
 // console.log(count);
 
-// traping rain water 
+// traping rain water
 
+var trap = function (height) {
+  let left = new Array(height.length);
+  let right = new Array(height.length);
+  let maxLeft = height[0],
+    maxRight = height[height.length - 1];
+  (left[0] = maxLeft), (right[right.length - 1] = maxRight);
+};
