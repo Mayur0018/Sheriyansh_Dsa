@@ -39,14 +39,42 @@
 //     console.log("No Palindrome");
 //   }
 // }
-let myName = "Mayur Nishad";
-let i = 0;
-let j = myName.length - 1;
-let palidrome = true;
-while (i < j) {
-  if (myName.charAt(i) != myName.charAt(i)) {
-    palidrome = false;
-  }
-  i++;
-  j--;
-}
+// let myName = prompt("Enter Palidrome Values");
+// let i = 0;
+// let j = myName.length - 1;
+// let palidrome = true;
+// while (i < j) {
+//   if (myName.charAt(i) != myName.charAt(j)) {
+//     palidrome = false;
+//   }
+//   i++;
+//   j--;
+// }
+// if (palidrome) console.log("palidrome");
+// else console.log("No palidrome");
+// let s = prompt();
+// console.log(s);
+// let toggle = "";
+// for (let i = 0; i < s.length - 1; i++) {
+//   let ch = s.charAt(i);
+//   if (s.charCodeAt(i) >= 65 && s.charCodeAt(i) <= 90) {
+//     toggle = toggle + String.fromCharCode(s.charCodeAt(i) + 32);
+//   } else if (s.charCodeAt(i) >= 97 && s.charCodeAt(i) <= 122) {
+//     toggle = toggle + String.fromCharCode(s.charCodeAt(i) - 32);
+//   }
+// }
+
+// console.log(toggle);
+
+// let s = prompt("Enter A number");
+// let arr = new Array(128).fill(0);
+
+// for (let i = 0; i < s.length; i++) {
+//   let indx = s.charCodeAt(i);
+//   arr[indx] = arr[indx] + 1;
+// }
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > 0) {
+//     console.log(String.fromCharCode(i)+ " appears at " + arr[i] + " times");
+//   }
+// }
