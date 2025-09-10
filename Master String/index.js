@@ -28,3 +28,25 @@
 
 // palidrome of String
 
+// let s = "Sheriyansh";
+// let rev = "";
+
+// for (let i = s.length - 1; i > 0; i--) {
+//   rev +=  s[i];
+//   if (rev === s) {
+//     console.log("Palindrome");=-0-=0
+//   } else {
+//     console.log("No Palindrome");
+//   }
+// }
+let myName = "Mayur Nishad";
+let i = 0;
+let j = myName.length - 1;
+let palidrome = true;
+while (i < j) {
+  if (myName.charAt(i) != myName.charAt(i)) {
+    palidrome = false;
+  }
+  i++;
+  j--;
+}
