@@ -78,3 +78,4 @@
 //     console.log(String.fromCharCode(i)+ " appears at " + arr[i] + " times");
 //   }
 // }
+
