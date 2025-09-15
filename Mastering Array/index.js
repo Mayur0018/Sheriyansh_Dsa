@@ -235,3 +235,42 @@
 //   return ans
 // };
 // console.log(trap[10,20,30,40,50]);
+
+// let arr = [10,20,30,40,50];
+// arr.push(60);
+// arr.push("Mayur");
+// console.log(arr);
+// console.log(arr[2]);
+
+// let arr = [10, 20, 30, 40];
+// let newarray = (arr[0] = 100);
+// console.log(arr);
+// console.log(newarray);
+// let arr = new Array(10);
+// console.log(arr);
+// let arr = [];
+// arr[0] = Number(prompt("Enter The Value"));
+// arr[1] = Number(prompt("Enter The Value"));
+// arr[2] = Number(prompt("Enter The Value"));
+// arr[3] = Number(prompt("Enter The Value"));
+// arr[4] = Number(prompt("Enter The Value"));
+// console.log(arr);
+// let arr = [10, 20, 30, 40, 50];
+// let sum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   sum = sum + arr[i];
+// }
+// console.log(sum);
+
+let arr = [10, 20, 30, 40, 50];
+let max = arr[0];
+let secondMax = "";
+for (let i = 2; i < arr.length; i++) {
+  if (max > arr[i]) {
+    secondMax = max;
+    max = arr[i];
+  }
+  return secondMax;
+}
+console.log(secondMax);
