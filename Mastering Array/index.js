@@ -338,11 +338,57 @@
 // }
 // console.log(arr);
 
-let arr = [1, 2, 3, 4, 5, 6];
-let copy = arr[0];
-for (let i = 0; i < arr.length - 1; i++) {
-  arr[i] = arr[i + 1];
-}
-arr[arr.length - 1] = copy;
-console.log(arr);
+// let arr = [1, 2, 3, 4, 5, 6];
+// let copy = arr[0];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
+// }
+// arr[arr.length - 1] = copy;
+// console.log(arr);
 
+// let arr = [1,2,3,4,5,6];
+// let copy =  arr[arr.length-1];
+
+// for(let i = arr.length-1; i>0; i--){
+//     arr[i] = arr[i-1];
+// }
+// arr[0] = copy;
+// console.log(arr);
+
+// for (let i = 0; i <1; i++) {
+//   console.log("Inner Loop");
+
+//   for (let j = 0; j < 1; j++) {
+//     console.log("Mayur is the Best Coder");
+//     console.log("Outer Loop");
+//   }
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let copy = arr[0];
+// let k = Number(prompt("Enter The Number"));
+// let count = 0;
+// for (let j = 0; j < k%arr.length; j++) {
+//     count++
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr[arr.length - 1] = copy;
+// }
+
+// console.log(arr);
+// console.log(count);
+var removeDuplicates = function (nums) {
+  let j = 1;
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] !== nums[i + 1]) {
+      nums[j] = nums[i+1];
+      j++
+    }
+  }
+  return j
+};
+
+
+
+console.log(removeDuplicates([0,1,0,0,0,2,3]));
