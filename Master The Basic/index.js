@@ -29,3 +29,5 @@
 // when we know how many times we will run we know itreation so we can use for loop 
 // Entry Control And Exit Control Loop.for loop is while loop entry control do while exit control
 
+
+

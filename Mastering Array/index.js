@@ -378,17 +378,81 @@
 
 // console.log(arr);
 // console.log(count);
-var removeDuplicates = function (nums) {
-  let j = 1;
-  for (let i = 0; i < nums.length - 1; i++) {
-    if (nums[i] !== nums[i + 1]) {
-      nums[j] = nums[i+1];
-      j++
-    }
-  }
-  return j
-};
+// var removeDuplicates = function (nums) {
+//   let j = 1;
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i] !== nums[i + 1]) {
+//       nums[j] = nums[i+1];
+//       j++
+//     }
+//   }
+//   return j
+// };
+
+// console.log(removeDuplicates([0,1,0,0,0,2,3]));
+
+// merge sorted Array
+
+// let arr1 = [2, 5, 6];
+// let arr2 = [1, 3, 4, 8];
+// let merge = new Array(arr1.length + arr2.length);
+// let i = 0;
+// j = 0;
+// k = 0;
+
+// while (i < arr1.length && j < arr2.length) {
+//   if (arr1[i] < arr2[j]) {
+//     merge[k++] = arr1[i++];
+//   } else {
+//     merge[k++] = arr2[j++];
+//   }
+// }
+
+// while (j < arr2.length) {
+//   merge[k++] = arr2[j++];
+// }
+// while (i < arr1.length) {
+//   merge[k++] = arr1[i++];
+// }
+
+// console.log(merge);
+
+// var maxSuarray = function (nums) {
+//   let max = -Infinity;
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     sum += nums[i];
+//     max = Math.max(max, sum);
+//     if(sum<0) sum = 0;
+//   }
+//   return max;
+// };
+
+// moris voting
+// let arr = [2, 3, 1, -1, 0, 2];
+// let ans = arr[0];
+// let count = 1;
+
+// for (let i = 1; i <= arr.length - 1; i++) {
+//   if (count == 0) {
+//     ans = arr[i];
+//     count = 1;
+//   } else if (ans == arr[i]) {
+//     count++;
+//   } else {
+//     count--;
+//   }
+// }
+// console.log(ans);
 
 
+// left rotation by one Element
+// let arr = [1, 2, 3, 4, 5];
+// let copy = arr[0];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
+// }
+// arr[arr.length - 1] = copy;
+// console.log(arr);
 
-console.log(removeDuplicates([0,1,0,0,0,2,3]));
+
