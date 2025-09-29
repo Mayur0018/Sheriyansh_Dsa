@@ -445,7 +445,6 @@
 // }
 // console.log(ans);
 
-
 // left rotation by one Element
 // let arr = [1, 2, 3, 4, 5];
 // let copy = arr[0];
@@ -455,4 +454,21 @@
 // arr[arr.length - 1] = copy;
 // console.log(arr);
 
+// right roatation by on element
+// let arr = [1,2,3,4,5];
+// let copy = arr[arr.length-1];
+// for(let i =arr.length-1; i>0; i--){
+//     arr[i] = arr[i-1];
+// }
+// arr[0] = copy;
+// console.log(arr);
 
+// Nested Looping
+for (let i = 0; i < 2; i++) {
+  console.log("Outer Loop",i);
+
+  for (let j = 0; j <= 2; j++) {
+    console.log("Mayur is The Best Coder",j);
+    console.log("Inner Loop");
+  }
+}
