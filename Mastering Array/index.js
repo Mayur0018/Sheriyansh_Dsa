@@ -464,11 +464,47 @@
 // console.log(arr);
 
 // Nested Looping
-for (let i = 0; i < 2; i++) {
-  console.log("Outer Loop",i);
+// for (let i = 0; i < 2; i++) {
+//   console.log("Outer Loop",i);
 
-  for (let j = 0; j <= 2; j++) {
-    console.log("Mayur is The Best Coder",j);
-    console.log("Inner Loop");
+//   for (let j = 0; j <= 2; j++) {
+//     console.log("Mayur is The Best Coder",j);
+//     console.log("Inner Loop");
+//   }
+// }
+
+// let arr = [10, 20, 30, 40, 50];
+// let k = Number(prompt("Enter The Number"));
+// let copy = arr[0];
+// for (let j = 0; j < k % arr.length; j++) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+// }
+// arr[arr.length - 1] = copy;
+// console.log(arr);
+
+// let arr = [10, 20, 30, 40, 50];
+// let temp = new Array(arr.length);
+// let k = Number(prompt("Enter The Number"));
+// k = k % arr.length;
+// for (let i = 0; i < arr.length; i++) {
+//   temp[i] = arr[(i + k) % arr.length];
+// }
+
+// console.log(temp);
+let arr = [1, 2, 3, 4, 5];
+let k = Number(prompt("Enter The Number"))
+function reverse(i, j) {
+  while (i < j) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[k];
+
+    arr[j] = temp;
+    i++;
+    j--;
   }
 }
+reverse(0,k-1)
+console.log(arr);
