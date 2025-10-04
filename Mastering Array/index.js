@@ -493,18 +493,68 @@
 // }
 
 // console.log(temp);
-let arr = [1, 2, 3, 4, 5];
-let k = Number(prompt("Enter The Number"))
-function reverse(i, j) {
-  while (i < j) {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[k];
+// let arr = [1, 2, 3, 4, 5];
+// let k = Number(prompt("Enter The Number"))
+// function reverse(i, j) {
+//   while (i < j) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[k];
 
-    arr[j] = temp;
-    i++;
-    j--;
-  }
-}
-reverse(0,k-1)
-console.log(arr);
+//     arr[j] = temp;
+//     i++;
+//     j--;
+//   }
+// }
+// reverse(0,k-1)
+// console.log(arr);
+
+// var removeDuplicates = function (nums) {
+//   let j = 1;
+//   for (let i = 0; i < nums.lenght - 1; i++) {
+//     if (nums[i] !== nums[i + 1]) {
+//       nums[j] = nums[i+1];
+//       j++
+//     }
+//   }
+//   return j;
+// };
+
+// let arr1 = [2, 5, 6];
+// let arr2 = [1, 3, 4, 8];
+// let temp = new Array(arr1.length + arr2.length);
+// let i = 0;
+// j = 0;
+// k = 0;
+
+// while (i < arr1.length && j < arr2.length) {
+//   if (arr1[i] < arr2[j]) {
+//     temp[k] = arr1[i];
+//     i++;
+//     k++;
+//   } else {
+//     temp[k++] = arr2[j++];
+//   }
+// }
+// while (j < arr2.length) {
+//   temp[k++] = arr1[j++];
+// }
+
+// while (j < arr1.length) {
+//   temp[k++] = arr2[k++];
+// }
+
+// console.log(temp);
+
+// var maxProfit = function (prices) {
+//   let maxProfit = 0;
+//   let min = prices[0];
+//   for(let i =0; i<prices.length; i++){
+//      if(prices[i]<min) min = prices[i];
+//     let  profit = prices[i] - min;
+//     maxProfit = Math.max(maxProfit,profit)
+//   }
+//   return maxProfit;
+// };
+
+
