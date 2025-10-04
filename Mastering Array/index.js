@@ -557,4 +557,29 @@
 //   return maxProfit;
 // };
 
+// var maxSuarray = function (nums) {
+//   let max = -Infinity;
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     sum += nums[i];
+//     max = Math.max(max, sum);
+//     if (sum < 0) sum = 0;
+//   }
+//   return max;
+// };
 
+// var majority = function(nums){
+//     let ans = nums[0];
+//     let count =0;
+//     for(i=0; i<nums.length; i++){
+//         if(count==0){
+//             ans = nums[i];
+//             count =1;
+//         }else if(ans === nums[i]){
+//             count++;
+//         }else{
+//             count--
+//         }
+//     }
+//     return ans;
+// }
