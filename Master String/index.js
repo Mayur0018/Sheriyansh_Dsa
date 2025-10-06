@@ -80,5 +80,32 @@
 // }
 
 // let m = "Mayur is The Best Coder";
-// console.log(m.slice(0,4));
+// console.log(m.slice(1,4));
 
+// let reverseStr = prompt("Enter The Reverse Value");
+// let temp = "";
+// for (let i = reverseStr.length - 1; i >= 0; i--) {
+//   temp = temp + reverseStr[i];
+// }
+// if (temp === reverseStr) {
+//   console.log("Palidrome");
+// }
+// console.log(temp);
+
+// let reverseStr = prompt("Enter The String Values");
+// let j = reverseStr.length - 1;
+// let i = 0;
+// let ispalindrome = true;
+// while (i < j) {
+//   if (reverseStr.charAt(i) != reverseStr.charAt(j)) {
+//     ispalindrome = false;
+//     break;
+//   }
+//   i++;
+//   j--;
+// }
+
+// if (ispalindrome) console.log("palindrome");
+// else {
+//   console.log("Not Paldindrome");
+// }
