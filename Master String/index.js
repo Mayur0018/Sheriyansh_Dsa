@@ -79,3 +79,6 @@
 //   }
 // }
 
+// let m = "Mayur is The Best Coder";
+// console.log(m.slice(0,4));
+
