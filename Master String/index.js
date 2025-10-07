@@ -109,3 +109,37 @@
 // else {
 //   console.log("Not Paldindrome");
 // }
+
+// let reverseChar = prompt("Enter The String Value");
+// console.log(reverseChar);
+
+// let toogle = "";
+
+// for (let i = 0; i < reverseChar.length; i++) {
+//   let ch = reverseChar.charAt(i);
+//   if (reverseChar.charCodeAt(i) >= 65 && reverseChar.charCodeAt(i) <= 90) {
+//     toogle = toogle + String.fromCharCode(reverseChar.charCodeAt(i) + 32);
+//   } else if (
+//     reverseChar.charCodeAt(i) >= 97 &&
+//     reverseChar.charCodeAt(i) <= 122
+//   ) {
+//     toogle = toogle + String.fromCharCode(reverseChar.charCodeAt(i) - 32);
+//   }
+// }
+
+// console.log(toogle);
+
+let str = prompt("Enter a Number");
+let arr = new Array(128).fill(0);
+
+for (let i = 0; i < str.length; i++) {
+  let index = str.charCodeAt(i);
+  arr[index] = arr[index] + 1;
+}
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > 0) {
+    console.log(String.fromCharCode(i) + "appears at" + arr[i] + "times");
+  }
+}
