@@ -26,8 +26,12 @@
 // console.log(b);
 
 // continue stop the corrent itreation of the looop continue the next itreation..
-// when we know how many times we will run we know itreation so we can use for loop 
+// when we know how many times we will run we know itreation so we can use for loop
 // Entry Control And Exit Control Loop.for loop is while loop entry control do while exit control
 
-
+// for (let i = 1; i <= 8; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 2000);
+// }
 
