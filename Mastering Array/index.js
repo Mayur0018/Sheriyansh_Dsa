@@ -608,24 +608,55 @@
 
 // console.log(isPalidrome("rar"));
 
-function countVowels(str) {
-  let vowels = "aeiMayurNishad";
-  let v = 0;
-  c = 0;
-  for (let i = 0; i < str.length; i++) {
-    let ch = str[i];
-    if ((ch > "a" && ch <= "z") || (ch >= "A" && ch <= "z")) {
-      let found = false;
-      for (let j = 0; j < vowels.length; j++) {
-        if (ch === vowels[j]) {
-          found = true;
-          break;
-        }
-      }
-      if (found) v++;
-      else c++;
+// function countVowels(str) {
+//   let vowels = "aeiMayurNishad";
+//   let v = 0;
+//   c = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     let ch = str[i];
+//     if ((ch > "a" && ch <= "z") || (ch >= "A" && ch <= "z")) {
+//       let found = false;
+//       for (let j = 0; j < vowels.length; j++) {
+//         if (ch === vowels[j]) {
+//           found = true;
+//           break;
+//         }
+//       }
+//       if (found) v++;
+//       else c++;
+//     }
+//   }
+//   return { vowels: v, consonants: c };
+// }
+// console.log(countVowels("hello"));
+
+// function firstUniqeChar(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     let count = 0;
+//     for (let i = 0; j < str.length - 1; j++) {
+//       if (str[i] === str[j]) count++;
+//     }
+//     if (count === 1) return str[i];
+//   }
+//   return null;
+// }
+
+// function charFrequency(str) {
+//   let freq = {};
+//   for (let i = 0; i < str.length - 1; i++) {
+//     let ch = str[i];
+//     freq[ch] = (freq[ch] || 0) + 1;
+//   }
+//   return freq;
+// }
+
+// console.log(charFrequency("Maaayur"));
+
+function replaceSpace(str){
+    let result = "";
+    for(let i =0; i<str.length-1; i++){
+       result += str[i] === " " ? "    " : str[i]; 
     }
-  }
-  return { vowels: v, consonants: c };
+    return result;
 }
-console.log(countVowels("hello"));
+console.log(replaceSpace("Gabu is The Best Rider"));
