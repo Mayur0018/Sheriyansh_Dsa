@@ -584,11 +584,48 @@
 //     return ans;
 // }
 
-function reverseString(str) {
-  let reverse = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    reverse += str[i];
+// function reverseString(str) {
+//   let reverse = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reverse += str[i];
+//   }
+//   return reverse;
+// }
+// console.log(reverseString("Mayur"));
+
+// function isPalidrome(str) {
+//   let i = 0;
+//   j = str.length - 1;
+//   while (i < j) {
+//     if (str[i] !== str[j]) {
+//       i++;
+//       j--;
+//       return false;
+//     }
+//     return true;
+//   }
+// }
+
+// console.log(isPalidrome("rar"));
+
+function countVowels(str) {
+  let vowels = "aeiMayurNishad";
+  let v = 0;
+  c = 0;
+  for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+    if ((ch > "a" && ch <= "z") || (ch >= "A" && ch <= "z")) {
+      let found = false;
+      for (let j = 0; j < vowels.length; j++) {
+        if (ch === vowels[j]) {
+          found = true;
+          break;
+        }
+      }
+      if (found) v++;
+      else c++;
+    }
   }
-  return reverse;
+  return { vowels: v, consonants: c };
 }
-console.log(reverseString("Mayur"));
+console.log(countVowels("hello"));
