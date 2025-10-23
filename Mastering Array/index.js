@@ -652,11 +652,12 @@
 
 // console.log(charFrequency("Maaayur"));
 
-function replaceSpace(str){
-    let result = "";
-    for(let i =0; i<str.length-1; i++){
-       result += str[i] === " " ? "    " : str[i]; 
-    }
-    return result;
-}
-console.log(replaceSpace("Gabu is The Best Rider"));
+// function replaceSpace(str){
+//     let result = "";
+//     for(let i =0; i<str.length-1; i++){
+//        result += str[i] === " " ? "    " : str[i]; 
+//     }
+//     return result;
+// }
+// console.log(replaceSpace("Gabu is The Best Rider"));
+
