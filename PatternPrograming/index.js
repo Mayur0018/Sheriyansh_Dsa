@@ -19,8 +19,8 @@
 // }
 
 // right angle triangle pattern
-let prompt = require("prompt-sync")();
-let n = Number(prompt("Enter The Number"));
+// let prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter The Number"));
 // for (let i = 1; i <= n; i++) {
 //   for (let j = 1; j <= i; j++) {
 //     process.stdout.write("*");
@@ -66,3 +66,8 @@ let n = Number(prompt("Enter The Number"));
 //   }
 //   console.log();
 // }
+
+
+// process.stdout.write("Hellow");
+// process.stdout.write("Mayur Nishad is The Best Coder");
+
