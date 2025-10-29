@@ -71,3 +71,14 @@
 // process.stdout.write("Hellow");
 // process.stdout.write("Mayur Nishad is The Best Coder");
 
+
+
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
+process.stdout.write("*");
