@@ -169,14 +169,41 @@ function isprime(nums) {
 }
 console.log(isprime(3));
 
-// Find the Avrage of Array 
-function avarage(arr){
+// Find the Avrage of Array
+function avarage(arr) {
   let sum = 0;
-  for(let i =0; i<arr; i++){
-    sum = sum + num;
-    sum = sum / arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
   }
-  return sum;  
+  const avrageVale = sum / arr.length;
+  return avrageVale;
 }
 
-console.log(avarage([10,20,30]));
+console.log(avarage([10, 20, 30]));
+
+// mising number from 1 to n
+function misingNum(arr, n) {
+  let expected = 0;
+  let actual = 0;
+  for (let i = 0; i <= n; i++) {
+    expected += i;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    actual += arr[i];
+  }
+  return expected - actual;
+}
+
+// remove all spaces
+function removespces(str) {
+  let res = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      res = res + str[i];
+    }
+  }
+  return res;
+}
+console.log(removespces("M a y ur Best Hai or Rhega"));
+
+
