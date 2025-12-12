@@ -169,4 +169,14 @@ function isprime(nums) {
 }
 console.log(isprime(3));
 
-// Find Fibonachii Series 
+// Find the Avrage of Array 
+function avarage(arr){
+  let sum = 0;
+  for(let i =0; i<arr; i++){
+    sum = sum + num;
+    sum = sum / arr.length;
+  }
+  return sum;  
+}
+
+console.log(avarage([10,20,30]));
