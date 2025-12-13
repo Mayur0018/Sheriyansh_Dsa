@@ -206,4 +206,49 @@ function removespces(str) {
 }
 console.log(removespces("M a y ur Best Hai or Rhega"));
 
+// Longest Substring Without Repeating Characters
+function lenghtOfLongestSubstring(s) {
+  let set = {};
+  let left = 0;
+  maxLen = 0;
+  for (let right = 0; right < s.length; right++) {
+    while (set[s[right]]) {
+      delete set[s[left]];
+      left++;
+    }
+    set[s[right]] = true;
+    if (right - left + 1 > maxLen) maxLen = right - left + 1;
+  }
+  return maxLen;
+}
+console.log(lenghtOfLongestSubstring("dfdsfs"));
+
+// TWO SUM PROBLEM 
+function towsum(num,target){
+  for(let i =0; i<num.length; i++){
+    for(let j = i + 1; j<num.length; j++){
+      if(num[i] + num[j] === target) return [i,j];
+    }
+  }
+  return [];
+}
+
+console.log(towsum([2,7,11,15],9));
+
+// maximum Product Subarray 
+
+function maxProduct(nums){
+  let maxProd = nums[0],minpod = nums[0], result = nums[0];
+  for(let i =1; i<nums.length; i++){
+    let tempMax = maxProd;
+    maxProd = Math.max(nums[i],nums[i]*maxProd, nums[i]*minpod);
+    minpod = Math.min(nums[i],nums[i]*tempMax,nums[i]*minpod);
+    if(maxProd > result) result = maxProd
+  }
+  return result;
+}
+console.log(maxProduct([2,3,-2,4]));
+
+
+// Rotate Array By K Steps 
 
