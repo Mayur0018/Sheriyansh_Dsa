@@ -251,4 +251,25 @@ console.log(maxProduct([2,3,-2,4]));
 
 
 // Rotate Array By K Steps 
+function roate(nums,k){
+  let n = nums.length;
+  k= k % n; 
+  let temp = [];
+
+  for(let i = n-k; i<n; i++){
+    temp.push(nums[i]);
+  }
+  for(let i = n-1-k; i>=0; i++){
+    nums[i+k] = nums[i];
+  }
+
+  for(let i =0; i<k;i++){
+    nums[i] = temp[i];
+  }
+}
+
+let arr = [1,2,3,4];
+roate(arr,3)
+console.log(arr);
+
 
