@@ -7,21 +7,18 @@
   </head>
   <body>
     <script>
-      function MoveToZero(arr) {
-        let index = 0;
+      function FinidngDuplicatesNumber(arr) {
         for (let i = 0; i < arr.length; i++) {
-          if (arr[i] !== 0) {
-            arr[index] = arr[i];
-            index++;
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+              return arr[i];
+            }
           }
         }
-        while (index < arr.length) {
-          arr[index] = 0;
-          index++;
-        }
-        return arr;
+        return -1;
       }
-      console.log(MoveToZero([10, 20, 0, 30, 40]));
+
+      console.log(FinidngDuplicatesNumber([10, 20, 40, 20]));
     </script>
   </body>
 </html>

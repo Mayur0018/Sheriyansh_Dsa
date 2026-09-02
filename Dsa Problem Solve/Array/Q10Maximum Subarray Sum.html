@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function FindingSubArray(arr) {
+        let cuurentSum = arr[0];
+        let maxSum = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (cuurentSum < 0) {
+            cuurentSum = arr[i];
+          } else {
+            cuurentSum = cuurentSum + arr[i];
+          }
+          if (cuurentSum > maxSum) {
+            maxSum = cuurentSum;
+          }
+        }
+        return maxSum;
+      }
+      console.log(FindingSubArray([-2,1-3,1,-1,1,-5,-4,4]));
+    </script>
+  </body>
+</html>
