@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function MergeTowArray(arr1, arr2) {
+        let result = [];
+        let k = 0;
+        for (let i = 0; i < arr1.length; i++) {
+          result[k] = arr1[i];
+          k++;
+        }
+        for (let j = 0; j < arr2.length; j++) {
+          result[k] = arr1[j];
+          k++;
+        }
+
+        for (let i = 0; i < result.length; i++) {
+          for (let j = i+1; j < result.length; j++) {
+            if (result[i] > result[j]) {
+              let temp = result[i];
+              result[i] = result[j];
+              result[j] = temp;
+            }
+          }
+        }
+        return result;
+      }
+
+      console.log(
+        MergeTowArray(
+          [10, 2054, 687, 54575, 544, 1357],
+          [1456, 80, 4704, 440,  5683, 57554],
+        ),
+      );
+    </script>
+  </body>
+</html>
