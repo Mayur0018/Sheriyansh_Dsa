@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mjorityElement(num) {
+        let count = {};
+        for (let i = 0; i < num.length; i++) {
+          count[num[i]] = (count[num[i]] || 0) + 1;
+
+          if (count[num[i]] > num.length / 2) {
+            return num[i];
+          }
+        }
+      }
+
+      console.log(mjorityElement([2, 2, 2, 1, 1, 2, 2, 2, 2]));
+    </script>
+  </body>
+</html>
