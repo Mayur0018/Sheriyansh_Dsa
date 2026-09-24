@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function LongestCommanPrifix(str) {
+        let result = "";
+        for (let i = 0; i < str[0].length; i++) {
+          let char = str[0][i];
+          for (let j = 1; j < str.length; j++) {
+            if (str[j][i] != char) {
+              return result;
+            }
+          }
+          result += char;
+        }
+        return result;
+      }
+      console.log("Answer:", LongestCommanPrifix(["rohit", "rohit", "rohit"]));
+    </script>
+  </body>
+</html>

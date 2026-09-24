@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function longestSubsstrings(str) {
+        let maxLength = 0;
+        for (let i = 0; i < str.length; i++) {
+          let count = 0;
+          for (let j = 0; j < str.length; j++) {
+            let duplicate = false;
+            for (let k = i; k < j; k++) {
+              if (str[k] == str[j]) {
+                duplicate = true;
+                break;
+              }
+            }
+            if (duplicate) {
+              break;
+            }
+            count++;
+
+            if (count > maxLength) {
+              maxLength = count;
+            }
+          }
+        }
+        return maxLength;
+      }
+    </script>
+  </body>
+</html>
