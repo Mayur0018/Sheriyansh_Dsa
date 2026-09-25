@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function frequencyCheck(nums) {
+        let map = new Map();
+        for (let i = 0; i < nums.length; i++) {
+          if (map.has(nums[i])) {
+            map.set(nums[i], map.get(nums[i]) + 1);
+          } else {
+            map.set(nums[i], 1);
+          }
+        }
+        return map;
+      }
+
+      let nums = [1, 2, 2, 3, 3, 5, 4,4,2];
+      console.log(frequencyCheck(nums));
+    </script>
+  </body>
+</html>

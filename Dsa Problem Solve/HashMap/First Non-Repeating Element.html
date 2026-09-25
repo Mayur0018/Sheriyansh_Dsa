@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function firstNonRporting(nums) {
+        let map = new Map();
+        for (let i = 0; i < nums.length; i++) {
+          map.set(nums[i], (map.get(nums[i]) || 0) + 1);
+        }
+        for (let i = 0; i < nums.length; i++) {
+          if (map.get(nums[i]) === 1) {
+            return nums[i];
+          }
+        }
+        return -1;
+      }
+      console.log(firstNonRporting([10,20,30,40,50,20,20,20]))
+    </script>
+  </body>
+</html>
