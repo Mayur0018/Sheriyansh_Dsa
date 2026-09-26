@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function CommonElemnt(arr1, arr2) {
+        let map = new Map();
+        let result = [];
+        let k = 0;
+
+        for (let i = 0; i < arr1.length; i++) {
+          map.set(arr1[i], true);
+        }
+
+        for (let i = 0; i < arr2.length; i++) {
+          if (map.has(arr2[i])) {
+            result[k] = arr2[i];
+            k++;
+          }
+          
+        }
+        return result
+      }
+      console.log(CommonElemnt([10, 20, 30, 40, 50], [10, 40, 60, 20, 80, 20]));
+    </script>
+  </body>
+</html>

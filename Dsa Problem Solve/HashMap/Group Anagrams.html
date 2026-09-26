@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function GroupAnagrams(strs) {
+        let map = new Map();
+
+        for (let i = 0; i < strs.length; i++) {
+          let word = strs[i];
+
+          let freq = new Map();
+
+          for (let j = 0; j < word.length; j++) {
+            let ch = word[j];
+
+            if (freq.has(ch)) {
+              freq.set(ch, freq.get(ch) + 1);
+            } else {
+              freq.set(ch, 1);
+            }
+          }
+
+          let found = false;
+
+          for (let [key, group] of map) {
+            if (key.size !== freq.size) {
+              continue;
+            }
+
+            let same = true;
+
+            for (let [ch, count] of freq) {
+              if (!key.has(ch) || key.get(ch) !== count) {
+                same = false;
+                break;
+              }
+            }
+
+            if (same) {
+              group[group.length] = word;
+              found = true;
+              break;
+            }
+          }
+
+          if (!found) {
+            map.set(freq, [word]);
+          }
+        }
+
+        let result = [];
+
+        for (let [key, group] of map) {
+          result[result.length] = group;
+        }
+
+        return result;
+      }
+
+      console.log(GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+    </script>
+  </body>
+</html>
