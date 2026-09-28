@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function countPairs(nums, target) {
+        let map = new Map();
+        let count = 0;
+        for (let i = 0; i < nums.length; i++) {
+          let cureent = nums[i];
+          let complement = target - cureent;
+
+          if (map.has(complement)) {
+            count = count + map.get(complement);
+          }
+
+          if (map.has(cureent)) {
+            map.set(cureent, map.get(cureent) + 1);
+          } else {
+            map.set(cureent, 1);
+          }
+        }
+        return count;
+      }
+
+      console.log(countPairs([1, 5, 7, -1, 5], 6));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findMisingNumber(nums) {
+        let map = new Map();
+        for (let i = 0; i < nums.length; i++) {
+          map.set(nums[i], 1);
+        }
+        for (let i = 0; i <= nums.length; i++) {
+          if (!map.has(i)) {
+            return i;
+          }
+        }
+      }
+      console.log(findMisingNumber([3,1]));
+    </script>
+  </body>
+</html>
