@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function topKfrequent(nums, k) {
+        let map = new Map();
+        let result = [];
+
+        for (let i = 0; i < nums.length; i++) {
+          let current = nums[i];
+          if (map.has(current)) {
+            map.set(current, map.get(current) + 1);
+          } else {
+            map.set(current, 1);
+          }
+        }
+
+        for (let i = 0; i < k; i++) {
+          let maxFrequency = -1;
+          let maxNumber = -1;
+
+          for (let [number, frequency] of map) {
+            if (frequency > maxFrequency) {
+              maxFrequency = frequency;
+              maxNumber = number;
+            }
+          }
+
+          result[result.length] = maxNumber;
+          map.delete(maxNumber);
+        }
+        return result;
+      }
+      console.log(topKfrequent([1, 1, 1, 2, 2, 3],2));
+    </script>
+  </body>
+</html>
