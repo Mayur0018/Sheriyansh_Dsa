@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
+      class LinkedList {
+        constructor() {
+          this.head = null;
+        }
+        insert(value) {
+          let newNode = new Node(value);
+
+          if (this.head === null) {
+            this.head = newNode;
+            return;
+          }
+          let cuurent = this.head;
+          while (cuurent.next !== null) {
+            cuurent = cuurent.next;
+          }
+          cuurent.next = newNode;
+        }
+        delete(value) {
+          if (this.head == null) {
+            return;
+          }
+          if (this.head.value == value) {
+            this.head = this.head.next;
+            return;
+          }
+          let cuurent = this.head;
+
+          while (cuurent.next !== null) {
+            if (cuurent.next.value === value) {
+              cuurent.next = cuurent.next.next;
+              return;
+            }
+            cuurent = cuurent.next;
+          }
+        }
+        display() {
+          let cuurent = this.head;
+          while (cuurent !== null) {
+            console.log(cuurent.value);
+            cuurent = cuurent.next;
+          }
+        }
+      }
+      let list = new LinkedList();
+
+      list.insert(10);
+      list.insert(20);
+      list.insert(30);
+      list.insert(40);
+      list.insert(50);
+
+      console.log("Before Delete");
+      list.display();
+      list.delete(30);
+      console.log("After Delete");
+      list.display();
+    </script>
+  </body>
+</html>
