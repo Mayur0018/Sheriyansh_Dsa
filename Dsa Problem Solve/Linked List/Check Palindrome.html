@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
+
+      function checkPalidrome(head) {
+        if (head == null || head.next === null) {
+          return true;
+        }
+        let slow = head;
+        let fast = head;
+
+        while (fast !== null && fast.next !== null) {
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        let prv = null;
+        let cureent = slow;
+        while (cureent !== null) {
+          let nextNode = cureent.next;
+          cureent.next = prv;
+          prv = cureent;
+          cureent = nextNode;
+        }
+
+        let first = head;
+        let second = prv;
+
+        while (second !== null) {
+          if (first.value !== second.value) {
+            return false;
+          }
+          first = first.next;
+          second = second.next;
+        }
+        return true;
+      }
+
+      let head = new Node(1);
+      head.next = new Node(2);
+      head.next.next = new Node(3);
+      head.next.next.next = new Node(4);
+      head.next.next.next.next = new Node(5);
+      console.log(checkPalidrome(head));
+    </script>
+  </body>
+</html>

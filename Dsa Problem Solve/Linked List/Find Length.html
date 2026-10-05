@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Node{
+            constructor(value){
+                this.value = value;
+                this.next = null;
+            }
+        }
+        class LinkedList{
+            constructor(){
+                this.head = null;
+            }
+            insert(value){
+                let newNode = new Node(value);
+                if(this.head === null){
+                    this.head = newNode;
+                    return;
+                }
+
+                let cuurent = this.head;
+
+                while(cuurent.next !== null){
+                    cuurent = cuurent.next;
+                }
+                cuurent.next = newNode;
+            }
+
+            findLength(){
+                let cureent  = this.head;
+                let count = 0;
+                while(cureent !== null){
+                    count++;
+                    cureent = cureent.next;
+                }
+                return count;
+            }
+        }
+        let  list = new LinkedList();
+        list.insert(10);
+        list.insert(20);
+        list.insert(30);
+        list.insert(40);
+        list.insert(50);
+
+        let length = list.findLength();
+        console.log("Length Of Linked List", length);
+        
+    </script>
+</body>
+</html>

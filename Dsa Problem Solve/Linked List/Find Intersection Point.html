@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
+      function findIntersection(head1, head2) {
+        let first = head1;
+        let second = head2;
+
+        while (first !== second) {
+          if (first == null) {
+            first = head2;
+          } else {
+            first = first.next;
+          }
+
+          if (second === null) {
+            second = head1;
+          } else {
+            second = second.next;
+          }
+        }
+        return first;
+      }
+      let common = new Node(6);
+      common.next = new Node(8);
+
+      let head1 = new Node(1);
+      head1.next = new Node(2);
+      head1.next.next = new Node(3);
+
+      head1.next.next.next = common;
+
+      let head2 = new Node(4);
+      head2.next = new Node(5);
+
+      head2.next.next = common;
+
+      let result = findIntersection(head1, head2);
+      if (result !== null) {
+        console.log("Intersection Point", result.value);
+      } else {
+        console.log("No Intersection");
+      }
+    </script>
+  </body>
+</html>
