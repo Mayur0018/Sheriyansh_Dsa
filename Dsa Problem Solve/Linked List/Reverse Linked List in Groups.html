@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class ListNode {
+        constructor(val) {
+          this.val = val;
+          this.next = null;
+        }
+      }
+
+      function reverseGroup(head, k) {
+        let dummy = new ListNode(0);
+        dummy.next = head;
+
+        let groupPrv = dummy;
+
+        while (true) {
+          let kth = groupPrv;
+
+          for (let i = 0; i < k; i++) {
+            kth = kth.next;
+            if (kth == null) {
+              return dummy.next;
+            }
+          }
+
+          let groupNext = kth.next;
+
+          let prv = groupNext;
+          let current = groupPrv.next;
+
+          while (current !== groupNext) {
+            let next = current.next;
+            current.next = prv;
+            prv = current;
+            current = next;
+          }
+
+          let temp = groupPrv.next;
+          groupPrv.next = kth;
+          groupPrv = temp;
+        }
+      }
+
+      let head = new ListNode(1);
+
+      head.next = new ListNode(2);
+      head.next.next = new ListNode(3);
+      head.next.next.next = new ListNode(4);
+      head.next.next.next.next = new ListNode(5);
+
+      let k = 2;
+      let result = reverseGroup(head, k);
+
+      let current = result;
+
+      while (current !== null) {
+        console.log(current.val);
+        current = current.next;
+      }
+    </script>
+  </body>
+</html>

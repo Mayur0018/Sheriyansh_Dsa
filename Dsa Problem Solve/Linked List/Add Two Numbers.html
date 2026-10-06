@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+</head>
+
+<body>
+
+<script>
+
+    // 1. Linked List Node
+    class ListNode {
+
+        constructor(val) {
+            this.val = val;
+            this.next = null;
+        }
+
+    }
+
+
+    // 2. Function
+    function addTwoNumbers(l1, l2) {
+
+        let dummy = new ListNode(0);
+        let current = dummy;
+
+        let carry = 0;
+
+
+        // 3. Jab tak koi node ya carry bacha hai
+        while (l1 !== null || l2 !== null || carry !== 0) {
+
+            // l1 ki current value
+            let num1 = l1 ? l1.val : 0;
+
+            // l2 ki current value
+            let num2 = l2 ? l2.val : 0;
+
+
+            // Addition
+            let sum = num1 + num2 + carry;
+
+
+            // Answer ka current digit
+            let digit = sum % 10;
+
+
+            // Carry
+            carry = Math.floor(sum / 10);
+
+
+            // New node banao
+            current.next = new ListNode(digit);
+
+
+            // Current ko next node par le jao
+            current = current.next;
+
+
+            // l1 ko next node par le jao
+            if (l1 !== null) {
+                l1 = l1.next;
+            }
+
+
+            // l2 ko next node par le jao
+            if (l2 !== null) {
+                l2 = l2.next;
+            }
+
+        }
+
+
+        // Dummy ko skip karke actual answer return
+        return dummy.next;
+
+    }
+
+
+
+    // 4. Number 11
+    // 11 = 1 → 1
+
+    let l1 = new ListNode(1);
+
+    l1.next = new ListNode(1);
+
+
+
+    // 5. Number 12
+    // 12 = 2 → 1
+
+    let l2 = new ListNode(2);
+
+    l2.next = new ListNode(1);
+
+
+
+    // 6. Function call
+    let result = addTwoNumbers(l1, l2);
+
+
+
+    // 7. Print result
+    let current = result;
+
+    while (current !== null) {
+
+        console.log(current.val);
+
+        current = current.next;
+
+    }
+
+</script>
+
+</body>
+
+</html>
