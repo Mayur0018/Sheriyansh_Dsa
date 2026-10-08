@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class ListNode {
+        constructor(val) {
+          this.val = val;
+          this.next = null;
+        }
+      }
+      function sortList(head) {
+        if (head === null || head.next == null) {
+          return head;
+        }
+
+        let slow = head;
+        let fast = head.next;
+
+        while (fast !== null && fast.next !== null) {
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        let second = slow.next;
+        slow.next = null;
+
+        let left = sortList(head);
+        let right = sortList(second);
+
+        return merge(left, right);
+      }
+
+      function merge(left, right) {
+        let dummy = new ListNode(0);
+        let current = dummy;
+
+        while (left !== null && right !== null) {
+          if (left.val < right.val) {
+            current.next = left;
+            left = left.next;
+          } else {
+            current.next = right;
+            right = right.next;
+          }
+          current = current.next;
+        }
+
+        if (left !== null) {
+          current.next = left;
+        }
+
+        if (right !== null) {
+          current.next = right;
+        }
+
+        return dummy.next;
+      }
+
+      let head = new ListNode(4);
+      head.next = new ListNode(2);
+
+      head.next.next = new ListNode(1);
+
+      head.next.next.next = new ListNode(3);
+
+      let result = sortList(head);
+
+      let current = result;
+
+      while (current !== null) {
+        console.log(current.val);
+        current = current.next;
+      }
+    </script>
+  </body>
+</html>
