@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nextGraterElement(arr) {
+        let stack = [];
+        let result = [];
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+          while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+            stack.pop();
+          }
+          if (stack.length === 0) {
+            result[i] = -1;
+          } else {
+            result[i] = stack[stack.length - 1];
+          }
+          stack.push(arr[i]);
+        }
+        return result;
+      }
+      let arr = [4, 5, 2, 10, 8];
+
+      console.log(nextGraterElement(arr));
+    </script>
+  </body>
+</html>

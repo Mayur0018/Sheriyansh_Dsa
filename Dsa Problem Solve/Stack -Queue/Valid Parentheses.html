@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isVslid(s) {
+        let stack = [];
+
+        for (let i = 0; i < s.length; i++) {
+          let char = s[i];
+
+          if (char === "(" || char === "[" || char === "{") {
+            stack.push(char);
+          } else {
+            if (stack.length === 0) {
+              return false;
+            }
+            let last = stack.pop();
+            if (
+              (char === ")" && last !== "(") ||
+              (char === "]" && last !== "[") ||
+              (char === "}" && last !== "{")
+            ) {
+              return false;
+            }
+          }
+        }
+        return stack.length === 0;
+      }
+
+      console.log(isVslid("()"));
+      console.log(isVslid("([)]"));
+      console.log(isVslid("{[]}"));
+    </script>
+  </body>
+</html>
