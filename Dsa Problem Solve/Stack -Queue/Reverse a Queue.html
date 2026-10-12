@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let queue = [10, 20, 30, 40, 50];
+      let stack = [];
+      let reversedQueue = [];
+
+      while (queue.length > 0) {
+        stack.push(queue.shift());
+      }
+
+      while (stack.length > 0) {
+        reversedQueue.push(stack.pop());
+      }
+
+      console.log(reversedQueue);
+    </script>
+  </body>
+</html>

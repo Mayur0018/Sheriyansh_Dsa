@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class MinStack {
+        constructor() {
+          this.stack = [];
+          this.MinStack = [];
+        }
+        push(value) {
+          this.stack.push(value);
+
+          if (
+            this.MinStack.length === 0 ||
+            value <= this.MinStack[this.MinStack.length - 1]
+          ) {
+            this.MinStack.push(value);
+          }
+        }
+        pop() {
+          let removed = this.stack.pop();
+          if (removed === this.MinStack[this.MinStack.length - 1]) {
+            this.MinStack.pop();
+          }
+          return removed;
+        }
+        top() {
+          return this.stack[this.stack.length - 1];
+        }
+
+        getMin() {
+          return this.MinStack[this.MinStack.length - 1];
+        }
+      }
+      let s = new MinStack();
+      s.push(5);
+      s.push(3);
+      s.push(7);
+      s.push(2);
+      s.pop();
+      console.log(s.getMin());
+    </script>
+  </body>
+</html>

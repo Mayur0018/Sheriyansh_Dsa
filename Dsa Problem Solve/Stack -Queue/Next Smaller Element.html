@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        function NextsmallElement(){
-            let stack = [];
-            let result = [];
+      function NextsmallElement(arr) {
+        let stack = [];
+        let result = [];
+        for (let i = aar.length - 1; i >= 0; i--) {
+          while (stack.length > 0 && stack[stack.length - 1] >= arr[i]) {
+            stack.pop();
+          }
+          if (stack.length === 0) {
+            result[i] = -1;
+          } else {
+            result[i] = stack[stack.length - 1];
+          }
+          stack.push(arr[i]);
         }
+        return result;
+      }
     </script>
-</body>
+  </body>
 </html>
