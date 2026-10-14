@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [10, 25, 35, 45, 55];
+      let target = 30;
+
+      let found = false;
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+          console.log("Element Fount at index", i);
+          found = true;
+          break;
+        }
+      }
+      if (found === false) {
+        console.log("Element is Not Found");
+      }
+    </script>
+  </body>
+</html>

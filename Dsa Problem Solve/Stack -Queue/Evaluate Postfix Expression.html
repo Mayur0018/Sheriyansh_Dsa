@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function evvalutePostfix(expresion) {
+        let stack = [];
+        for (let i = 0; i < expresion.length; i++) {
+          let char = expresion[i];
+
+          if (char >= "0" && char <= "9") {
+            stack.push(Number(char));
+          } else {
+            let b = stack.pop();
+            let a = stack.pop();
+
+            if (char === "+") stack.push(a + b);
+            else if (char === "_") stack.push(a - b);
+            else if (char === "*") stack.push(a * b);
+            else if (char === "/") stack.push(Math.trunc(a / b));
+          }
+        }
+        return stack.pop();
+      }
+
+      console.log(evvalutePostfix("23+"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "({[]})";
+      let stack = [];
+      let isBalnaced = true;
+
+      for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+
+        if (char == "(" || char === "{" || char === "[") {
+          stack.push(char);
+        } else {
+          if (stack.length === 0) {
+            isBalnaced = false;
+            break;
+          }
+          let last = stack.pop();
+
+          if (
+            (char === ")" && last !== "(") ||
+            (char === "}" && last !== "{") ||
+            (char === "]" && last !== "[")
+          ) {
+            isBalnaced = false;
+            break;
+          }
+        }
+      }
+      if(stack.length !== 0){
+        isBalnaced = false;
+      }
+      console.log(isBalnaced);
+      
+    </script>
+  </body>
+</html>
