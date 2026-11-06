@@ -7,44 +7,43 @@
   </head>
   <body>
     <script>
-      function removeDuplicates(arr){
+      function removeDuplicates(arr) {
         let result = [];
-        for(let i = 0; i<arr.length; i++){
+        for (let i = 0; i < arr.length; i++) {
           let exsit = false;
-          for(let j = 0;  j<result.length; j++){
-            if(arr[i] === result[i]){
+          for (let j = 0; j < result.length; j++) {
+            if (arr[i] === result[i]) {
               return true;
-              break
+              break;
             }
           }
-          if(exsit === false){
+          if (exsit === false) {
             result[result.length] = arr[i];
           }
         }
         return result;
       }
-      console.log(removeDuplicates([1,2,3,4,3,5]));
-
+      console.log(removeDuplicates([1, 2, 3, 4, 3, 5]));
 
       // second largest
-      function secondLragest(arr){
+      function secondLragest(arr) {
         let largest = -Infinity;
         let second = -Infinity;
 
-        for(let i =0; i<arr.length; i++){
-          if(arr[i]> largest){
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > largest) {
             second = largest;
-            largest = arr[i]
-          }else if(arr[i] > second && arr[i] < largest){
-            second = arr[i]
+            largest = arr[i];
+          } else if (arr[i] > second && arr[i] < largest) {
+            second = arr[i];
           }
         }
-        if(second === -Infinity){
-            return "Second Largest Number Nahi Mila"
-          }
-          return second;
+        if (second === -Infinity) {
+          return "Second Largest Number Nahi Mila";
+        }
+        return second;
       }
-      console.log(secondLragest([10,5,20,8,15]));
+      console.log(secondLragest([10, 5, 20, 8, 15]));
     </script>
   </body>
 </html>
